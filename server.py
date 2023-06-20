@@ -2,7 +2,7 @@ from typing import Union
 from fastapi import FastAPI
 from pydantic import BaseModel, validator
 import re
-from circle_square_client import CircleSquareClient
+from lib.circle_square_client import CircleSquareClient
 
 
 class RequestEvents(BaseModel):
