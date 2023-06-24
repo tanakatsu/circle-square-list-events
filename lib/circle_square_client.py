@@ -49,7 +49,8 @@ class CircleSquareClient:
         events = []
         for elm in elms:
             event_name = elm.text.strip().replace("\u3000", " ") 
-            # print(event_name)
+            event_url = elm.parent.parent.select("a")[0].get("href")
+            # print(event_name, event_url)
             sub_elms = elm.parent.select("li")
             dateinfo = sub_elms[2].text.lstrip("\n\xa0").strip()
             # print(dateinfo)
@@ -58,7 +59,11 @@ class CircleSquareClient:
                 start_time = f"{year}/{m.group(1)} {m.group(2)}"
                 end_time = f"{year}/{m.group(1)} {m.group(3)}"
                 # print(start_time, end_time)
-                events.append({"name": event_name, "start_time": start_time, "end_time": end_time})
+                events.append({"name": event_name,
+                               "start_time": start_time,
+                               "end_time": end_time,
+                               "url": event_url,
+                               })
 
         # print(events)
         return events
