@@ -59,11 +59,14 @@ class CircleSquareClient:
                 start_time = f"{year}/{m.group(1)} {m.group(2)}"
                 end_time = f"{year}/{m.group(1)} {m.group(3)}"
                 # print(start_time, end_time)
-                events.append({"name": event_name,
-                               "start_time": start_time,
-                               "end_time": end_time,
-                               "url": event_url,
-                               })
+            else:
+                start_time = None
+                end_time = None
+            events.append({"name": event_name,
+                           "start_time": start_time,
+                           "end_time": end_time,
+                           "url": event_url,
+                           })
 
         # print(events)
         return events
