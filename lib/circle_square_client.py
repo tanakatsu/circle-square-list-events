@@ -60,8 +60,9 @@ class CircleSquareClient:
                 end_time = f"{year}/{m.group(1)} {m.group(3)}"
                 # print(start_time, end_time)
             else:
-                start_time = None
-                end_time = None
+                m2 = re.match(r'(\d+\/\d+)', dateinfo)
+                start_time = f"{year}/{m2.group(1)}"
+                end_time = f"{year}/{m2.group(1)}"
             events.append({"name": event_name,
                            "start_time": start_time,
                            "end_time": end_time,
