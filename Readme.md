@@ -27,7 +27,7 @@ $ curl -X POST -H "Content-Type: application/json" -d '{"account":"YOUR_ACCOUNT"
 You'll receive something like this.
 ```
 [
-  {"name":"イベント1","start_time":"2025/6/3 09:00","end_time":"2023/6/3 11:30","url":"https://www.c-sqr.net/events/xxx"},
+  {"name":"イベント1","start_time":"2023/6/3 09:00","end_time":"2023/6/3 11:30","url":"https://www.c-sqr.net/events/xxx"},
   {"name":"イベント2","start_time":"2023/6/4 09:00","end_time":"2023/6/4 11:30","url":"https://www.c-sqr.net/events/yyy"}
 ]
 ```
